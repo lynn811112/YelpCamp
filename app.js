@@ -19,11 +19,12 @@ const userRoutes = require('./routes/users');
 const campgroundRoutes = require('./routes/campgrouds');
 const reviewRoutes = require('./routes/reviews');
 const MongoStore = require('connect-mongo');
-const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp';
+//  dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp'
+const dbUrl = 'mongodb://localhost:27017/yelp-camp';
 const secret = process.env.SECRET || 'thisshouldbeagoodsecret!';
 const port = process.env.PORT || 3000
 
-// mongodb://localhost:27017/yelp-camp
+
 mongoose.connect(dbUrl);
 
 const db = mongoose.connection;
